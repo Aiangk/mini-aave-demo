@@ -1,0 +1,261 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* 主应用容器 */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  background-color: #0a0b15;
+}
+
+/* 背景效果 */
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.app-gradient {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(60, 46, 144, 0.2) 0%,
+    rgba(28, 22, 69, 0.1) 40%,
+    rgba(10, 11, 21, 0.05) 60%,
+    rgba(10, 11, 21, 0) 70%
+  );
+  transform: rotate(45deg);
+}
+
+.app-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 50px 50px;
+  background-image: linear-gradient(
+      rgba(96, 123, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(96, 123, 255, 0.05) 1px, transparent 1px);
+  opacity: 0.4;
+}
+
+/* 主内容区 */
+.app-main {
+  flex-grow: 1;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 全局卡片样式 */
+.sci-fi-card {
+  background: rgba(14, 16, 31, 0.7);
+  border-radius: 10px;
+  border: 1px solid rgba(96, 123, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(14, 16, 31, 0.4);
+  backdrop-filter: blur(4px);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sci-fi-card:hover {
+  border-color: rgba(96, 123, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(14, 16, 31, 0.6), 0 0 8px rgba(96, 123, 255, 0.3);
+}
+
+.sci-fi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3c2e90, #5260cf, #607bff);
+  opacity: 0.7;
+}
+
+/* 按钮样式 */
+.sci-fi-button {
+  background: linear-gradient(135deg, #3c2e90 0%, #5260cf 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sci-fi-button:hover {
+  background: linear-gradient(135deg, #5260cf 0%, #607bff 100%);
+  box-shadow: 0 0 10px rgba(96, 123, 255, 0.5);
+}
+
+.sci-fi-button:disabled {
+  background: #2a2a3a;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* 输入框样式 */
+.sci-fi-input {
+  background: rgba(10, 11, 21, 0.6);
+  border: 1px solid rgba(96, 123, 255, 0.3);
+  border-radius: 4px;
+  color: white;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.sci-fi-input:focus {
+  outline: none;
+  border-color: rgba(96, 123, 255, 0.8);
+  box-shadow: 0 0 0 2px rgba(96, 123, 255, 0.2);
+}
+
+/* 科技感标题 */
+.sci-fi-title {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sci-fi-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(96, 123, 255, 0.8),
+    transparent
+  );
+}
+
+/* 不同状态的颜色 */
+.highlight-positive {
+  color: #4caf9a;
+  font-weight: 600;
+}
+
+.highlight-negative {
+  color: #ff5252;
+  font-weight: 600;
+}
+
+.highlight-neutral {
+  color: #607bff;
+  font-weight: 600;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(96, 123, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(96, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(96, 123, 255, 0);
+  }
+}
+
+.pulse-effect {
+  animation: pulse 2s infinite;
+}
+
+/* 添加统计卡片样式 */
+.sci-fi-card .stats-card-title {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sci-fi-card .stats-card-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, #607bff, #a191ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 加载文本样式 */
+.loading-text {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}

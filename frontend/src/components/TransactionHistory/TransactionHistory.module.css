@@ -1,0 +1,68 @@
+.historyContainer {
+  background-color: #2c2c2c; /* 与 UserAccountOverview 类似 */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px; /* 与上方模块的间距 */
+  color: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.historyContainer h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.historyTable th,
+.historyTable td {
+  text-align: left;
+  padding: 12px 10px; /* 增加单元格内边距 */
+  border-bottom: 1px solid #4a4a4a; /* 更清晰的单元格分隔线 */
+}
+
+.historyTable th {
+  color: #c0c0c0;
+  font-weight: 600; /* 加粗表头 */
+  background-color: #383838; /* 表头背景色 */
+}
+
+.historyTable td {
+  color: #d0d0d0;
+}
+
+.historyTable tr:last-child td {
+  border-bottom: none;
+}
+
+.historyTable tr:hover td {
+  /* 悬停高亮行 */
+  background-color: #3f3f3f;
+}
+
+.txLink {
+  color: #64b5f6; /* 链接颜色 */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.txLink:hover {
+  color: #2196f3;
+  text-decoration: underline;
+}
+
+.historyContainer p {
+  /* 用于“加载中”或“无记录”的提示 */
+  text-align: center;
+  padding: 1rem;
+  color: #aaa;
+}

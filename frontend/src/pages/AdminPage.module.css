@@ -1,0 +1,126 @@
+/* src/pages/AdminPage.module.css */
+.pageContainer {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #f0f0f0;
+  }
+  
+  .pageHeader {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+  }
+  
+  .pageHeader h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .pageHeader p {
+    font-size: 1rem;
+    color: #b0b0b0;
+  }
+  
+  .permissionDenied {
+    text-align: center;
+    color: #ff8a80; /* 柔和的红色 */
+    font-size: 1.1rem;
+    padding: 20px;
+    background-color: rgba(255, 138, 128, 0.1);
+    border: 1px solid #ff8a80;
+    border-radius: 8px;
+  }
+  
+  .mainContent {
+    /* 可以留空，让 section 自己控制样式 */
+  }
+  
+  .adminSection {
+    background-color: #2c2c2c;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+  }
+  
+  .adminSection h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #4a4a4a;
+    padding-bottom: 10px;
+  }
+  
+  .adminForm {
+    display: grid;
+    grid-template-columns: 1fr; /* 默认单列 */
+    gap: 20px; /* 表单组之间的间距 */
+  }
+  
+  @media (min-width: 768px) { /* 在较宽屏幕上变为两列 */
+    .adminForm {
+      grid-template-columns: 1fr 1fr;
+    }
+    /* 让某些字段占据整行，如果需要的话 */
+    /* .formGroupFullWidth { grid-column: 1 / -1; } */
+  }
+  
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .formGroup label {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 2px;
+  }
+  
+  .formGroup input[type="text"],
+  .formGroup input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+  
+  .submitButton {
+    grid-column: 1 / -1; /* 让提交按钮占据整行，如果表单是多列的话 */
+    padding: 12px 15px;
+    background-color: #28a745; /* 绿色表示积极操作 */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px; /* 与上方表单组的间距 */
+  }
+  .submitButton:hover:not(:disabled) {
+    background-color: #218838;
+  }
+  .submitButton:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  

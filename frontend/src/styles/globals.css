@@ -1,0 +1,171 @@
+:root {
+  --max-width: 1280px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  --primary-color: #5c6bc0;
+  --primary-dark: #3f51b5;
+  --primary-light: #7986cb;
+
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --warning-color: #ffc107;
+  --info-color: #2196f3;
+
+  --text-primary: #333333;
+  --text-secondary: #757575;
+  --text-muted: #9e9e9e;
+
+  --bg-light: #ffffff;
+  --bg-gray: #f5f7fa;
+  --bg-dark: #fafafa;
+
+  --border-light: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--bg-light);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* 通用卡片样式 */
+.sci-fi-card {
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* 通用标题样式 */
+.sci-fi-title {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(92, 107, 192, 0.2);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.loading-text {
+  color: var(--text-secondary);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 错误状态 */
+.error-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-message {
+  color: var(--error-color);
+  margin-bottom: 1rem;
+}
+
+/* 空状态 */
+.empty-state {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* 统计卡片 */
+.stats-card {
+  background: var(--bg-gray);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stats-card-title {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stats-card-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* 按钮样式 */
+.btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(92, 107, 192, 0.3);
+}
+
+.btn-secondary {
+  background: var(--bg-gray);
+  color: var(--primary-color);
+  border: 1px solid var(--border-light);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-dark);
+  color: var(--primary-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}

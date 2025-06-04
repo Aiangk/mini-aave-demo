@@ -1,0 +1,41 @@
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# IDE 和编辑器配置
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 依赖文件夹 
+frontend/node_modules/
+contracts/node_modules/ # 如果你的 Solidity 项目也用了 npm/yarn (例如 Hardhat)
+contracts/lib/          # Foundry 依赖库
+
+# 构建产物
+frontend/dist/
+frontend/.vite/
+contracts/out/          # Foundry 编译产物
+contracts/cache/        # Foundry 和 Hardhat 缓存
+contracts/artifacts/    # Hardhat 编译产物
+contracts/deployments/  # Hardhat-deploy 部署信息
+
+# 环境变量文件 
+.env
+.env.*
+!.env.example # 确保 .env.example 文件被追踪
+
+# Foundry broadcast 和 cache (如果你的 broadcast/cache 在 contracts 目录下)
+contracts/broadcast/
+# contracts/cache/ # 上面已经有了 contracts/cache/
+
+# 其他
+coverage/
+coverage.json

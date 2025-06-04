@@ -1,0 +1,100 @@
+
+.flashLoanFormContainer {
+    background-color: #2f2f2f; /* 与 AssetCard 类似 */
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .flashLoanFormContainer h4 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.4rem;
+  }
+  
+  .formGroup {
+    margin-bottom: 1.25rem;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 6px;
+  }
+  
+  .formGroup input[type="number"],
+  .formGroup select {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .formGroup input:focus,
+  .formGroup select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+  
+  .summary {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #383838;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  .summary p {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .actionButton {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    background-color: #17a2b8; /* 闪电贷用一个不同的颜色 */
+    color: white;
+  }
+  .actionButton:hover:not(:disabled) {
+    background-color: #138496;
+  }
+  .actionButton:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  
+  .receiverInfo {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #888;
+      text-align: center;
+      line-height: 1.4;
+  }
+  .receiverInfo code {
+      display: block;
+      word-break: break-all;
+      background-color: #3a3a3a;
+      padding: 3px 5px;
+      border-radius: 3px;
+      margin-top: 3px;
+  }
+  

@@ -1,0 +1,283 @@
+.assetCard {
+  border: 1px solid #4a4a4a; /* 更深一点的边框 */
+  padding: 20px;
+  margin: 10px; /* 可以保留或由 AssetList 的 gap 控制 */
+  border-radius: 12px; /* 更大的圆角 */
+  background-color: #2f2f2f; /* 比 AssetListContainer 稍暗，形成层次感 */
+  color: #e0e0e0;
+  width: 400px; /* 稍微加宽以容纳更清晰的布局 */
+  max-width: calc(100% - 20px); /* 确保在小屏幕有边距 */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.assetHeader h3 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 0.25rem; /* 减少与 aToken 信息的间距 */
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.aTokenInfo {
+  font-size: 0.8rem;
+  color: #9e9e9e;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.assetInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 响应式列 */
+  gap: 0.75rem 1rem; /* 行间距和列间距 */
+  margin-bottom: 0.5rem; /* 与下方分割线的间距 */
+  padding: 10px;
+  background-color: #383838; /* 轻微背景区分 */
+  border-radius: 6px;
+}
+
+.userInfoGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* 单列，每项占满 */
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 10px;
+  background-color: #383838; /* 轻微背景区分 */
+  border-radius: 6px;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between; /* 标签和值左右对齐 */
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 4px 0; /* 轻微垂直内边距 */
+}
+.infoItem span:first-child {
+  /* 标签 */
+  color: #b0b0b0;
+}
+.infoItem span:last-child {
+  /* 值 */
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.apyRate {
+  color: #4caf50;
+  font-weight: bold;
+}
+.aprRate {
+  color: #f44336;
+  font-weight: bold;
+}
+.healthFactorGood {
+  color: #4caf50;
+  font-weight: bold;
+}
+.healthFactorLow {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #4a4a4a; /* 更深的分隔线 */
+  margin: 1rem 0;
+}
+
+.actionToggleButtons {
+  display: flex;
+  gap: 0.75rem; /* 按钮间距 */
+  margin-bottom: 1.25rem; /* 与下方操作区的间距 */
+}
+.toggleButton {
+  /* 重命名，避免与 actionButton 冲突 */
+  flex-grow: 1;
+  padding: 0.6rem 0.5rem; /* 调整内边距 */
+  background-color: #4f4f4f; /* 默认按钮背景 */
+  color: #d0d0d0;
+  border: 1px solid #5f5f5f;
+  border-radius: 6px; /* 更大的圆角 */
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.toggleButton:hover {
+  background-color: #5a5a5a;
+  border-color: #6a6a6a;
+}
+.toggleButton.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.actionSection {
+  padding: 1.25rem; /* 增加内边距 */
+  border: 1px solid #444; /* 更清晰的边框 */
+  border-radius: 8px; /* 与卡片一致的圆角 */
+  background-color: #353535; /* 稍亮的背景 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* 内部元素间距 */
+}
+.actionSection h5 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.borrowInfo {
+  /* 为借款部分的额外信息添加样式 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+.borrowInfo p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.borrowInfo .infoLabel {
+  color: #b0b0b0;
+}
+
+.assetCard input[type='number'] {
+  width: 100%;
+  padding: 0.8rem; /* 增加输入框内边距 */
+  background-color: #2a2a2a; /* 输入框背景 */
+  color: #e0e0e0; /* 输入文字颜色 */
+  border: 1px solid #555;
+  border-radius: 6px; /* 更大的圆角 */
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.assetCard input[type='number']:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+.assetCard input[type='number']:disabled {
+  background-color: #404040;
+  color: #777;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.actionButton {
+  width: 100%;
+  padding: 0.8rem 1rem; /* 调整按钮内边距 */
+  border: none;
+  border-radius: 6px; /* 更大的圆角 */
+  font-size: 1rem;
+  font-weight: 600; /* 加粗按钮文字 */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Spinner 和文字的间距 */
+}
+.actionButton:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+.actionButton:disabled {
+  background-color: #555;
+  color: #888; /* 禁用时文字颜色更明显 */
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.inputError {
+  color: #ff8a80; /* 更柔和的红色 */
+  font-size: 0.85em;
+  margin-top: -0.3rem;
+  margin-bottom: 0.5rem;
+  text-align: left; /* 错误信息左对齐 */
+}
+
+.connectWalletPrompt {
+  text-align: center;
+  padding: 1.5rem; /* 增加内边距 */
+  background-color: #3a3a3a;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+/* 简单的点状闪烁动画 (用于按钮加载) */
+.dotFlashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff; /* 点的颜色 */
+  color: #fff;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+  margin-left: 5px; /* 与文字的间距 */
+}
+.dotFlashing::before,
+.dotFlashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #fff;
+  animation: dotFlashing 1s infinite alternate;
+}
+.dotFlashing::before {
+  left: -15px;
+  animation-delay: 0s;
+}
+.dotFlashing::after {
+  left: 15px;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #fff;
+  }
+  50%,
+  100% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* 加载覆盖层样式 */
+.loadingOverlay {
+  position: absolute; /* 如果 AssetCard 是 relative 定位 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(42, 42, 42, 0.8); /* 半透明背景 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* 确保在最上层 */
+  border-radius: 12px; /* 与卡片圆角一致 */
+  color: white;
+}
+.loadingOverlay p {
+  margin-top: 10px;
+}

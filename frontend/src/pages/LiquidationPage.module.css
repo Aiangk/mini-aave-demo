@@ -1,0 +1,29 @@
+.pageContainer {
+  padding: 20px;
+  max-width: 900px; /* 限制页面最大宽度 */
+  margin: 0 auto; /* 页面居中 */
+  color: #f0f0f0; /* 默认文字颜色 */
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.pageHeader h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.pageHeader p {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.mainContent {
+  /* LiquidationForm 本身有背景和内边距，这里不需要额外设置 */
+}

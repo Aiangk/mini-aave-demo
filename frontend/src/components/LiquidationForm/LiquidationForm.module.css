@@ -1,0 +1,160 @@
+.liquidationFormContainer {
+  background-color: #2c2c2c;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px auto; /* 页面居中 */
+  max-width: 700px; /* 限制最大宽度 */
+  color: #f0f0f0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.liquidationFormContainer h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* 默认单列 */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  /* 在较宽屏幕上变为多列 */
+  .formGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  margin-bottom: 2px;
+}
+
+.formGroup input[type='text'],
+.formGroup input[type='number'],
+.formGroup select {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.fetchButton {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 20px;
+}
+.fetchButton:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+.fetchButton:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.userDetails {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #383838;
+  border-radius: 6px;
+  border: 1px solid #4a4a4a;
+}
+.userDetails h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.userDetails p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+}
+.userDetails p .warning {
+  color: #ff9800;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.liquidationAction {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.expectedReturn {
+  font-size: 0.9rem;
+  color: #64b5f6; /* 浅蓝色提示 */
+  text-align: center;
+  margin: 10px 0;
+  padding: 8px;
+  background-color: rgba(100, 181, 246, 0.1);
+  border-radius: 4px;
+}
+
+.actionButton {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  background-color: #dc3545; /* 清算按钮用红色 */
+  color: white;
+  margin-top: 10px;
+}
+.actionButton:hover:not(:disabled) {
+  background-color: #c82333;
+}
+.actionButton:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* 授权按钮可以有不同颜色 */
+.liquidationFormContainer button.approve-button {
+  /* 如果有特定授权按钮 */
+  background-color: #ffc107;
+  color: #212529;
+}
+.liquidationFormContainer button.approve-button:hover:not(:disabled) {
+  background-color: #e0a800;
+}

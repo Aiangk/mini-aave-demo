@@ -1,0 +1,162 @@
+.overviewContainer {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.overviewContainer h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.globalStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 15px; /* 减少与下方提示信息的间距 */
+  padding: 15px;
+  background-color: #333;
+  border-radius: 6px;
+}
+
+.statItem {
+  background-color: #3f3f3f;
+  padding: 15px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statItem span {
+  font-size: 0.9em;
+  color: #b0b0b0;
+  margin-bottom: 5px;
+}
+
+.statItem strong {
+  font-size: 1.3em;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* 健康因子颜色状态 */
+.healthFactorGood {
+  color: #4caf50 !important;
+}
+.healthFactorWarning {
+  /* 新增或修改 */
+  color: #ffc107 !important; /* 黄色警告 */
+}
+.healthFactorDanger {
+  /* 新增或修改 */
+  color: #f44336 !important; /* 红色危险 */
+}
+.healthFactorNoData {
+  color: #9e9e9e !important; /* 灰色表示无数据 */
+}
+
+/* 健康因子提示信息样式 */
+.healthFactorMessage {
+  text-align: center;
+  padding: 8px 12px;
+  margin-top: 0px; /* 紧贴 globalStats 下方 */
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* 根据健康状态应用不同背景和边框 */
+.healthFactorMessage.healthFactorGood {
+  /* 通常这个 message 不会显示，除非你想加一个“安全”的提示 */
+  background-color: rgba(76, 175, 80, 0.1);
+  border-color: #4caf50;
+  color: #4caf50;
+}
+.healthFactorMessage.healthFactorWarning {
+  background-color: rgba(255, 193, 7, 0.1);
+  border-color: #ffc107;
+  color: #ffc107;
+}
+.healthFactorMessage.healthFactorDanger {
+  background-color: rgba(244, 67, 54, 0.1);
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.assetListsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  margin-top: 10px; /* 与上方提示信息保持间距 */
+}
+
+.assetListSection {
+  flex: 1;
+  min-width: 300px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.assetListSection h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #e0e0e0;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #4f4f4f;
+  padding-bottom: 8px;
+}
+
+.assetTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assetTable th,
+.assetTable td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #4f4f4f;
+  font-size: 0.9em;
+}
+
+.assetTable th {
+  color: #c0c0c0;
+  font-weight: 500;
+}
+
+.assetTable td {
+  color: #d0d0d0;
+}
+
+.assetTable tr:last-child td {
+  border-bottom: none;
+}
+
+.apyRate {
+  color: #4caf50;
+  font-weight: bold;
+}
+.aprRate {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.errorMessage {
+  color: #ff6b6b;
+  text-align: center;
+}
