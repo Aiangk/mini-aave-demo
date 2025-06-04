@@ -110,8 +110,8 @@ Ensure the following tools are installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd <repo-name>
+git clone git@github.com:Aiangk/mini-aave-demo.git
+cd mini-aave-demo
 ```
 
 ### 2. Setup Environment Variables
