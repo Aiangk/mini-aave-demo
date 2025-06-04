@@ -117,8 +117,8 @@ frontend/
 ### 1. 克隆仓库
 
 ```bash
-git clone <你的仓库 URL>
-cd <仓库名称>
+git clone git@github.com:Aiangk/mini-aave-demo.git
+cd mini-aave-demo
 ```
 
 ### 2. 配置环境变量
