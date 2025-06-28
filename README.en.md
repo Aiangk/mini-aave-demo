@@ -26,29 +26,36 @@ Welcome to **Mini Aave Demo**, a simplified Ethereum-based lending protocol proj
 * Displays supply APY and borrow APR for each asset
 * Shows LTV, liquidation threshold, reserve factor, and liquidation bonus
 * Displays available liquidity for each asset in the pool
+![市场资产1](./frontend/src/assets/screnshot/市场资产1.png)
+![市场资产2](./frontend/src/assets/screnshot/市场资产2.png)
+![市场资产3](./frontend/src/assets/screnshot/市场资产3.png)
+
 
 ### Liquidation Center
 
 * Check any user's health factor
 * If HF < 1, liquidators can repay a portion of the debt and seize collateral at a discount
+![清算中心](./frontend/src/assets/screnshot/清算中心.png)
+![执行清算](./frontend/src/assets/screnshot/执行清算.png)
 
 ### Flash Loans (Basic Demo)
 
 * A simple UI to execute a one-time flash loan using a pre-set receiver contract
+![闪电贷中心](./frontend/src/assets/screnshot/闪电贷中心.png)
 
 ### Wallet Connection
 
 * Integrates **RainbowKit** for wallet connection (e.g., MetaMask)
 * Shows user address and balance
 
-### Transaction Feedback
-
-* Uses **react-toastify** to show toast notifications for transaction status
-
 ### Admin Panel
 
 * Allows contract owner to configure new assets in the LendingPool via the UI
+![管理员面板](./frontend/src/assets/screnshot/管理员面板.png)
 
+### Transaction Feedback
+
+* Uses **react-toastify** to show toast notifications for transaction status
 ---
 
 ## 🛠️ Tech Stack

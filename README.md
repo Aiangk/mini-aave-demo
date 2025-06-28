@@ -20,7 +20,6 @@
 * **还款 (Repay)**：偿还借款和利息
 
 ### 📊 用户账户面板
-
 * 总供应价值 (USD)
 * 总借款价值 (USD)
 * 健康因子 (Health Factor)
@@ -32,29 +31,35 @@
 * 每种资产的存款 APY 与借款 APR
 * LTV、清算门槛、储备因子、清算奖励
 * 池中可用流动性
+![市场资产1](./frontend/src/assets/screnshot/市场资产1.png)
+![市场资产2](./frontend/src/assets/screnshot/市场资产2.png)
+![市场资产3](./frontend/src/assets/screnshot/市场资产3.png)
 
 ### ⚔️ 清算机制
 
 * 查询账户健康状况
 * 如果 HF < 1，执行清算并获得其抵押资产
+![清算中心](./frontend/src/assets/screnshot/清算中心.png)
+![执行清算](./frontend/src/assets/screnshot/执行清算.png)
 
 ### ⚡ 闪电贷（演示版）
 
 * 执行一次性借出-归还的 FlashLoan 流程
+![闪电贷中心](./frontend/src/assets/screnshot/闪电贷中心.png)
 
 ### 🔐 钱包连接
 
 * 支持 MetaMask 等钱包（通过 RainbowKit）
 * 显示钱包地址和余额
 
-### 🔔 交易状态反馈
-
-* 使用 `react-toastify` 提示交易进度、成功或失败
-
 ### 🛠️ 管理员功能
 
 * 通过 UI 修改资产信息或添加新资产（仅限合约所有者）
+![管理员面板](./frontend/src/assets/screnshot/管理员面板.png)
 
+### 🔔 交易状态反馈
+
+* 使用 `react-toastify` 提示交易进度、成功或失败
 ---
 
 ## 🛠 技术栈
